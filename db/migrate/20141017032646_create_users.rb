@@ -6,10 +6,10 @@ class CreateUsers < ActiveRecord::Migration
       t.string :password
       t.string :location
       t.text :bio
-
-      t.index :email, unique: true
       
       t.timestamps
     end
+
+      add_index :users, :email, :unique => true
   end
 end

@@ -1,16 +1,10 @@
 class User < ActiveRecord::Base
-  EMAIL_REGEXP = /\A[^@]+@([^@\.]+\.)+[^@\.]+\z/
-
-  attr_accessible :bio, :email, :full_name, :location, :password
+  # attr_accessible :bio, :email, :full_name, :location, :password, :password_confirmation
+  # attr_accessor :bio, :email, :full_name, :location, :password
 
   validates_presence_of :email, :full_name, :location, :password
   validates_confirmation_of :password
-  validates_length_of :bio, minimum: 30, allow_blank: false
+  validates_length_of :bio, minimum: 5, allow_blank: false
+  validates_format_of :email, :with => /\A[^@]+@([^@\.]+\.)+[^@\.]+\z/
   validates_uniqueness_of :email
-
-  validates_format_of :email, with: EMAIL_REGEXP
-  # validate :email_format
-  # def email_format
-  #   errors.add(:email, :invalid) unless email.match(EMAIL_REGEXP)
-  # end
 end

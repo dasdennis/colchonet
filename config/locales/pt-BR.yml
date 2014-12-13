@@ -12,6 +12,13 @@ pt-BR:
   links:
     back: Voltar    
   
+  layout:
+    rooms: Quartos
+    signup: Cadastro
+
+  general:
+    form_error: Há erros no formulário, por favor verifique.
+
   activerecord:
     models:
       user: Usuário

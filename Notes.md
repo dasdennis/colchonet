@@ -33,3 +33,43 @@ Person.new(params)
 params.permit!
 Person.new(params)
 # => #<Person id: nil, name: "Bob">
+
+
+en:
+  users:
+    new:
+      title: Register
+    edit:
+      title: Editar Perfil
+    show:
+      title: "Perfil: %{user_name}"
+      edit: 'Editar Perfil'
+      location: "Localização: %{location}"
+      bio: "Bio: %{bio}"
+  links:
+    back: Voltar    
+  
+  layout:
+    rooms: Rooms
+    signup: Register
+
+  general:
+    form_error: Há erros no formulário, por favor verifique.
+
+  activerecord:
+    models:
+      user: Usuário
+      room: Quarto
+
+    attributes:
+      user:
+        bio: Biografia
+        email: Email
+        full_name: Nome completo
+        location: Localização
+        password: Senha
+        password_confirmation: Confirme sua senha
+      room:
+        description: Descrição
+        location: Localização
+        title: Título

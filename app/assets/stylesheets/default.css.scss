@@ -31,16 +31,16 @@ header {
   }
 
   height: $header-height;
-  background-color: #9ECE71;
+  background-color: #36648B;
   h1 {
     float: left;
     a {
-      color: #333;
+      color: #FFF8DC;
       font-family: $serif-families;
       font-weight: 400;
       font-size: 2.5em;
       &:hover {
-        color: #000;
+        color: #F0FFFF;
       }
     }
   }
@@ -52,7 +52,7 @@ header nav {
   float: right;
   li {
     display: inline;
-    background-color: #546f3c;
+    background-color: #009ACD;
     padding: 7px 10px;
 
     -moz-border-radius: 5px;

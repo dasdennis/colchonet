@@ -9,6 +9,8 @@ pt-BR:
       edit: 'Editar Perfil'
       location: "Localização: %{location}"
       bio: "Bio: %{bio}"
+    confirmations:
+      success: Email confirmado com sucesso, obrigado!  
 
   signup_mailer:
     confirm_email:

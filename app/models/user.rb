@@ -3,7 +3,8 @@ class User < ActiveRecord::Base
   
   validates_presence_of :email, :full_name, :location
   validates_length_of :bio, minimum: 5, allow_blank: false
-  validates_format_of :email, with: EMAIL_REGEXP 
+  validates_format_of :email, with: EMAIL_REGEXP
+  validates_uniqueness_of :email 
   
   has_secure_password
 
@@ -11,5 +12,17 @@ class User < ActiveRecord::Base
 
   def generate_token
     self.confirmation_token = SecureRandom.urlsafe_base64
+  end
+
+  def confirm!
+    return if confirmed?
+    
+    self.confirmed_at = Time.current
+    self.confirmation_token = ''
+    save!
+  end
+
+  def confirmed?
+    confirmed_at.present?
   end
 end

@@ -1,0 +1,4 @@
+ => #<File:saida.txt> 
+ => #<ActiveRecord::Relation [#<Room id: 6, title: "Shadow Host", location: "Angband", description: "Para Sauron, de Morgoth.", created_at: "2015-01-02 08:16:40", updated_at: "2015-01-02 08:16:40">]> 
+Hello!
+ => nil 

@@ -1,0 +1,1 @@
+#<Room::ActiveRecord_Relation:0x00000002fa69d0>
